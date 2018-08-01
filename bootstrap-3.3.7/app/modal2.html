@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="../dist/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body { padding-top: 20px; }
+    </style>
+  </head>
+  <body>
+    <div class="container">  
+      <div class="row">
+        <button class="btn btn-primary">Informations</button>
+        <div class="modal fade" id="item">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button class="close" data-dismiss="modal">&times;</button>
+                <h2 class="modal-title">Plus d'informations!!!</h2>
+              </div>
+              <div class="modal-body">
+                <blockquote>Il ya deux façons de faire la conception d'un logiciel. Une façon est de le rendre si simple qu'il n'y a selon toute apparence aucun défaut. Et l'autre est de le faire si compliqué qu'il n'y a pas de défaut apparent." Tony (C.A.R.) Hoare. Professeur d'informatique, a implementé Algol 60, chercheur à Microsoft Research.</blockquote>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../dist/js/jquery.js"></script>
+    <script src="../dist/js/bootstrap.min.js"></script>
+    <script>
+      $(function () {
+        $('.btn').click(function () {
+          $('.modal').modal({
+            keyboard:true,
+            show:true
+          });
+        })
+      })
+    </script>
+  </body>
+</html>

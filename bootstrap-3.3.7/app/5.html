@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <title>Bootstrap template</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <div class="col-lg-6">
+        <form class="form-inline well">
+          <div class="form-group">
+            <input type="text" class="form-control" name="" id="l">
+              <button class="btn btn-primary" type="submit">Envoyer</button>
+          </div>
+          <div class="alert alert-block alert-danger" style="display: none">
+            <h2>Erreur</h2>
+            <p>Vous devez entrer 4 caractères</p>
+          </div>
+        </form>
+      </div>
+    </div>
+    <button class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-user"></span><br>Utilisateurs</button>
+<button class="btn btn-warning btn-lg"><span class="glyphicon glyphicon-comment"></span><br>Commentaires</button>
+<button class="btn btn-success btn-lg"><span class="glyphicon glyphicon-calendar"></span><br>Evénements</button>
+<button class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-shopping-cart"></span><br>Boutique</button>
+<button class="btn btn-info btn-lg"><span class="glyphicon glyphicon-bullhorn"></span><br>Messages</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $('form').on("submit",function () {
+        if($('input').val().length < 4){
+          $('div.form-group').addClass('has-error');
+          $('div.alert').show('slow').delay(4000).hide("slow");
+        
+        return false;}
+      })
+    </script>
+  </body>
+</html>

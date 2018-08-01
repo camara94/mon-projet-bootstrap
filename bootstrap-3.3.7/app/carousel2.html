@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="../dist/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body { padding-top: 20px; }
+    </style>
+  </head>
+  <body>
+    <div class="container">  
+      <div class="row">
+        <div class="col-lg-5">
+          <div class="carousel slide">
+            <div class="carousel-inner">
+              <div class="item active">
+                <img src="../images/t5.jpg" width="500">
+                <a href="#" class="carousel-caption">Tigre 1</a>
+              </div>
+              <div class="item">
+                <img src="../images/t6.jpg" width="500">
+                <a href="#" class="carousel-caption">Tigre 2</a>
+              </div>
+              <div class="item">
+                <img src="../images/t7.jpg" width="500">
+                <a href="#" class="carousel-caption">Tigre 3</a>
+              </div>
+              <div class="item">
+                <img src="../images/t8.jpg" width="500">
+                <a href="#" class="carousel-caption">Tigre 4</a>
+              </div>
+            </div>
+          </div>
+          <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-success" id="first">
+              <span class="glyphicon glyphicon-fast-backward"></span>
+            </label>
+            <label class="btn btn-success" id="prec">
+              <span class="glyphicon glyphicon-backward"></span>
+            </label>
+            <label class="btn btn-success" id="pause">
+              <span class="glyphicon glyphicon-pause"></span>
+            </label>
+            <label class="btn btn-success" id="play">
+              <span class="glyphicon glyphicon-play"></span>
+            </label>
+            <label class="btn btn-success" id="next">
+              <span class="glyphicon glyphicon-forward"></span>
+            </label>
+            <label class="btn btn-success" id="last">
+              <span class="glyphicon glyphicon-fast-forward"></span>
+            </label>
+            <p><span class="label label-info" id="i"></span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../dist/js/jquery.js"></script>
+    <script src="../dist/js/bootstrap.min.js"></script>
+    <script>
+      $(function () {
+
+        function affichage() {
+          var total = $('.item').length;
+          var current = $('.item.active').index()+1;
+          $('#i').text(current + '/' + total);
+        }
+
+        $('.carousel').carousel({interval:2000});
+        $('#first').click(function () {$('.carousel').carousel(0)});
+        $('#prec').click(function () {$('.carousel').carousel('prev')});
+        $('#pause').click(function () {$('.carousel').carousel('pause')});
+        $('#play').click(function () {$('.carousel').carousel('cycle')});
+        $('#next').click(function () {$('.carousel').carousel('next')});
+        $('#last').click(function () {$('.carousel').carousel(3)});
+        $('.carousel').on('slid.bs.carousel',function () {
+           affichage();
+        })
+      })
+    </script>
+  </body>
+</html>

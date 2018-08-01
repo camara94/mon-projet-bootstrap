@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" />
+		<title>Les plugin jQurey</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" type="text/css" href="../dist/css/bootstrap.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<nav class="navbar navbar-inverse">
+					<div class="container-fluid">
+						<div class="navbar-header">
+							<a href="#" class="navbar-brand">Mon Beau Site</a>
+						</div>
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="#">Accueil</a></li>
+							<li><a href="#">Liens</a></li>
+							<li class="dropdown"><a href="#" data-toggle="dropdown">Témoingnages<b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Dompteurs</a></li>
+									<li><a href="#">Zoos</a></li>
+									<li><a href="#">Chasseurs</a></li>
+									<li class="divider"></li>
+									<li><a href="#">Autres témoingnages</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Références</a></li>
+						</ul>
+						<form class="navbar-form navbar-right form-inline">
+							<div class="form-group">
+								<input type="search" class="form-control input-sm" name="">
+								<button class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-eye-open"> Search</span></button>
+							</div>
+						</form>
+					</div>
+				</nav>
+				<div class="row">
+					<div class="btn-group">
+						<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Action<b class="caret"></b></button>
+						<ul class="dropdown-menu">
+							<li><a href="#"><span class="glyphicon glyphicon-user"> Dompteurs</span></a></li>
+							<li><a href="#"><span class="glyphicon glyphicon-picture"> Zoos</span></a></li>
+							<li><a href="#"><span class="glyphicon glyphicon-screenshot"> Chasseurs</span></a></li>
+							<li class="divider"></li>
+							<li><a href="#"><span class="glyphicon glyphicon-list-alt"> Autres témoingnages</span></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="btn-group col-lg-2 col-lg-offset-4">
+					<button class="btn btn-info">Action</button>
+					<button class="btn btn-info dropdown-toggle" data-toggle="dropdown"><b class="caret"></b></button>
+					<ul class="dropdown-menu">
+						<li><a href="#" class="glyphicon glyphicon-user"> Dompteurs</a></li>
+						<li><a href="#" class="glyphicon glyphicon-picture"> Zoos</a></li>
+						<li><a href="#" class="glyphicon glyphicon-screenshot"> Chasseurs</a></li>
+						<li class="divider"></li>
+						<li><a href="#" class="glyphicon glyphicon-list-alt"> Autres témoingnges</a></li>
+					</ul>
+				</div>
+				<div class="btn-group col-lg-2 col-lg-offset-6">
+					<h1 class="data-toggle"><a href="#" class="label label-default">Passez sur moi !</a></h1>
+					<ul class="dropdown-menu">
+						<li><a href="#" class="glyphicon glyphicon-user"> Dompteurs</a></li>
+						<li class="disabled"><a href="#" class="glyphicon glyphicon-picture"> Zoos</a></li>
+						<li><a href="#" class="glyphicon glyphicon-screenshot"> Chasseurs</a></li>
+					</ul>
+				</div>
+				<div class="btn-group col-lg-2 col-lg-offset-8">
+					<button class="btn btn-primary" href="#i" data-toggle="modal" data-backdrop="false">Informations</button>
+					<div class="modal fade" id="i">
+						<div class="modal-dialog modal-lg">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button class="close" data-dismiss="modal">&times;</button>
+									<h2>Plus d'informations !</h2>
+								</div>
+								<div class="modal-body">
+									<img src="../images/t1.jpg" class="pull-right" />
+									<blockquote>Il ya deux façons de faire la conception d'un logiciel. Une façon est de le rendre si simple qu'il n'y a selon toute apparence aucun défaut. Et l'autre est de le faire si compliqué qu'il n'y a pas de défaut apparent."	Tony (C.A.R.) Hoare. Professeur d'informatique, a implementé Algol 60, chercheur à Microsoft Research.</blockquote>
+									<button class="btn btn-danger" onclick="alert('Bonjour Camara')">bouton</button>
+								</div>
+								<div class="modal-footer">
+									<button class="btn btn-success" data-dismiss="modal">Fermer</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="../dist/js/jquery.js"></script>
+		<script type="text/javascript" src="../dist/js/bootstrap.js"></script>
+		<script type="text/javascript">
+			$(function () {
+				$('h1').mouseover(function () {
+					$(this).attr({'data-backdrop':false});
+					$('.dropdown-menu').dropdown('toggle');
+				})
+			})
+		</script>
+	</body>
+</html>

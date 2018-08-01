@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" />
+		<title>La barre de navigation</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" type="text/css" href="../dist/css/bootstrap.css" />
+	</head>
+	<body>
+		<div class="container">
+			<nav class="navbar navbar-inverse">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<a href="#" class="navbar-brand">Mon beau site</a>
+					</div>
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#">Accueil</a></li>
+						<li><a href="#">Liens</a></li>
+						<li><a href="#">Témoingnages</a></li>
+						<li><a href="#">Références</a></li>
+						<li><a href="#">Bibliographie</a></li>
+					</ul>
+					<form class="navbar-form navbar-right form-inline">
+						<div class="form-group">
+							<input type="search" class="form-control input-sm" name="">
+							<button class="btn btn-primary"><span class="glyphicon glyphicon-search">&nbsp;Search</span></button>
+						</div>
+					</form>
+				</div>
+			</nav>
+			<h2>Pagination</h2>
+			<ul class="pagination pagination-lg">
+				<li class="active"><a href="#">&laquo;</a></li>
+				<li><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">&raquo;</a></li>
+			</ul><br/>
+
+			<ul class="pagination">
+				<li><a href="#">&laquo;</a></li>
+				<li><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">&raquo;</a></li>
+			</ul><br>
+
+			<ul class="pagination pagination-sm">
+				<li><a href="#">&laquo;</a></li>
+				<li><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">&raquo;</a></li>
+			</ul>
+
+			        <div class="col-xs-4 col-sm-3 col-md-2"><img class="img-circle" src="../images/t1.jpg" alt="Tigre"></div>
+        <div class="col-xs-4 col-sm-3 col-md-2"><img src="../images/t2.jpg" alt="Tigre" class="img-rounded"></div>
+        <div class="col-xs-4 col-sm-3 col-md-2"><img class="img-thumbnail" src="../images/t3.jpg" alt="Tigre"></div>
+        <div class="col-xs-4 col-sm-3 col-md-2"><img src="../images/t4.jpg" alt="Tigre"></div>
+        <div class="col-xs-4 col-sm-3 col-md-2"><img src="../images/t5.jpg" alt="Tigre"></div>
+		</div>
+
+		<ul class="pager">
+			<li><a href="#"><span class="glyphicon glyphicon-backward"> Précédent</span></a></li>
+			<li><a href="#">Suivant&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-forward"></span></a></li>
+		</ul>
+		<button class="btn btn-danger">Envoie<span class="badge text-info">42</span></button>
+	</body>
+</html>

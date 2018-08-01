@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" />
+		<title>Un menu deroulant en bootstrap</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" type="text/css" href="../dist/css/bootstrap.css" />
+	</head>
+	<body>
+		<div class="container"> 
+			<div class="row">
+				<div class="btn-group">
+					<h1 data-toggle="deroulant"><span class="label label-warning">Passez sur moi!</span></h1>
+					<ul class="dropdown-menu">
+						<li><a href="#">Dompteurs</a></li>
+						<li><a href="#">Chasseurs</a></li>
+						<li class="divider"></li>
+						<li> <a href="#">Autres témoingnages</a></li>
+					</ul>
+				</div>
+			</div>
+
+
+		</div>
+
+		<button class="btn btn-primary"  data-backdrop="false" data-toggle="modal" href="#i">Informations!</button>
+		<div class="modal" id="i">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">x</button>
+						<h1 class="modal-title">Plus d'informations!</h1>
+					</div>
+					<div class="modal-body">
+						<img src="../images/t12.jpg" class="pull-right"><br>
+						<blockquote>La programmation est un art subtil et stimulant une fois les bases acquises seul notre imagination sera notre limite</blockquote>
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-warning" data-dismiss="modal">Fermer</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		 <button data-toggle="modal" href="menu.html" data-target="#infos" class="btn btn-primary">
+        informations
+      </button>
+      <div class="modal fade" id="infos">
+        <div class="modal-dialog">  
+          <div class="modal-content"></div>  
+        </div> 
+      </div>
+		<script type="text/javascript" src="../dist/js/jquery.js"></script>
+		<script type="text/javascript" src="../dist/js/bootstrap.js"></script>
+		<script type="text/javascript">
+			$(function () {
+				$('h1').mouseover(function () {
+					$(this).dropdown('toggle');
+				})	
+			})
+		</script>
+	</body>
+</html>

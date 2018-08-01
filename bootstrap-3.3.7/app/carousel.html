@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="../dist/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body { padding-top: 20px; }
+    </style>
+  </head>
+  <body>
+    <div class="container">  
+      <div class="row">
+        <div class="col-lg-2">
+          <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-info active" id="cycle">
+              <input type="radio" name="r">Cycle
+            </label>
+            <label class="btn btn-info" id="pause">
+              <input type="radio" name="r">Pause
+            </label>
+          </div>
+        </div>
+        <div class="col-lg-5 col-lg-offset-2">
+          <div class="carousel slide">
+            <div class="carousel-inner">
+              <div class="item active">
+                <img src="../images/t1.jpg" width="500">
+                <a href="#" class="carousel-caption">Tigre 1</a>
+              </div>
+              <div class="item">
+                <img src="../images/t2.jpg" width="500">
+                <a href="#" class="carousel-caption">Tigre 2</a>
+              </div>
+              <div class="item">
+                <img src="../images/t3.jpg" width="500">
+                <a href="#" class="carousel-caption">Tigre 3</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../dist/js/jquery.js"></script>
+    <script src="../dist/js/bootstrap.min.js"></script>
+    <script>
+      $(function () {
+        $('.carousel').carousel({interval:2000});
+        $('#cycle').click(function () {
+           $('.carousel').carousel('cycle');
+        })
+        $('#pause').click(function () {
+           $('.carousel').carousel('pause');
+        })
+      })
+    </script>
+  </body>
+</html>

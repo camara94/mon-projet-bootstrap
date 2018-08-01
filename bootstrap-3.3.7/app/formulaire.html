@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<title>Cours trois</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" type="text/css" href="../dist/css/bootstrap.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<form class="col-lg-6 well">
+					<fieldset>
+						<legend>Legende</legend>
+						<div class="form-group">
+							<label for="text">Text</label>
+							<input type="text" id="text" name="text" class="form-control">
+						</div>
+						<div class="form-group">
+							<label for="texta">Textarea</label>
+							<textarea id="texta" name="texta" class="form-control"></textarea>
+							<p class="help-block">Vous pouvez agrandir la fénêtre</p>
+						</div>
+						<div class="form-group">
+							<label for="select" >Select</label>
+							<select id="select" class="form-control">
+								<option>Option 1</option>
+								<option>Option 2</option>
+								<option>Option 3</option>
+							</select>
+						</div>
+						<div class="form-group">
+							Sexe:<br>
+							<input type="radio" name="" id="m"><label for="m" class="radio">M</label><br>
+							<input type="radio" name="" id="f"><label for="f" class="radio">F</label>
+						</div>
+						<div class="input-group">
+							<input type="text" class="form-control" name="" value="98,5">
+							<span class="input-group-addon">€</span>
+						</div>
+						<button class="btn btn-primary">Bouton</button>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+		<div class="col-lg-6 col-lg-offset-2">
+			<div class="input-group">
+			<span class="input-group-addon">
+				<input type="checkbox">
+			</span>
+			<input type="text" name="" value="125" class="form-control">
+			<span class="input-group-addon">
+				<input type="radio">
+			</span>
+			
+		</div><br>
+		<input type="text" class="form-control input-lg" name="" value="Grand">
+		<input type="text" class="form-control input-md" name="" value="Moyen">
+		<input type="text" class="form-control input-sm" value="pétit" name="">
+		</div>
+		<div class="col-lg-6 col-lg-offset-2">
+			<div class="form-group has-success">
+				<label class="control-label" for="idSuccess">Réussite</label>
+				<input type="text" name="" class="form-control" id="idSuccess">
+				<p class="help-block">Saisi correcte</p>
+			</div>
+			<div class="form-group has-warning">
+				<label class="control-label" for="idAvert">Avertissement</label>
+				<input type="text" name="" id="idAvert" class="form-control">
+				<p class="help-block">Il ya un problème dans la saisie</p>
+			</div>
+			<div class="form-group has-error">
+				<label class="control-label" id="idError">Erreur</label>
+				<input type="text" class="form-control" name="" id="idError">
+				<p class="help-block">Il ya une erreur dans la saisie</p>
+			</div>
+			<div class="input-group col-lg-2">
+				<span class="input-group-addon">€</span>
+				<input type="text" class="form-control" value="100" name="">
+				<span class="input-group-addon">.00</span>
+			</div>
+		</div>
+	</body>
+</html>
